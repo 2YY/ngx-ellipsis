@@ -17,5 +17,5 @@ describe('NgxEllipsisPipe', () => {
 
   it('do nothing if not over max char count', () => {
     expect(pipe.transform('12345', 10)).toEqual('12345');
-  })
+  });
 });
