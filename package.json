@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "run-p lint:*",
+    "lint:ng": "ng lint",
+    "lint:prettier": "prettier **/*.{ts,html} --write",
+    "lint:stylelint": "stylelint **/*.scss --fix",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -28,10 +31,11 @@
     "@angular-devkit/build-ng-packagr": "~0.1000.8",
     "@angular/cli": "~10.0.1",
     "@angular/compiler-cli": "~10.0.2",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0-next.1",
+    "husky": "^4.3.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -39,10 +43,31 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "lint-staged": "^10.4.2",
     "ng-packagr": "^10.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
     "protractor": "~7.0.0",
+    "stylelint": "^13.7.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "ng lint --fix",
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "stylelint --fix"
+    ]
   }
 }
