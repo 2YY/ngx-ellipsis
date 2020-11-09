@@ -1,7 +1,7 @@
 # NgxEllipsis
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/2f67429bd2ee19070695/maintainability)](https://codeclimate.com/github/2YY/ngx-ellipsis/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/2f67429bd2ee19070695/test_coverage)](https://codeclimate.com/github/2YY/ngx-ellipsis/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ca237f91fb67f856f044/maintainability)](https://codeclimate.com/github/2YY/ngx-ellipsis/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ca237f91fb67f856f044/test_coverage)](https://codeclimate.com/github/2YY/ngx-ellipsis/test_coverage)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
