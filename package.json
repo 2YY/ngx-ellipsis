@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "run-p lint:*",
     "lint:ng": "ng lint",
-    "lint:prettier": "prettier **/*.{ts} --write",
-    "_lint:stylelint": "stylelint **/*.scss --fix",
+    "lint:prettier": "prettier projects/ngx-ellipsis/src/**/*.ts --write",
+    "_lint:stylelint": "stylelint projects/ngx-ellipsis/src/**/*.scss --fix",
     "e2e": "ng e2e",
     "docs:json": "compodoc -p ./tsconfig.base.json -e json -d .",
     "storybook": "yarn docs:json && start-storybook -p 6006 --no-dll",
@@ -70,15 +70,6 @@
     }
   },
   "lint-staged": {
-    "*.ts": [
-      "ng lint --fix",
-      "prettier --write"
-    ],
-    "*.html": [
-      "prettier --write"
-    ],
-    "*.scss": [
-      "stylelint --fix"
-    ]
+		"projects/ngx-ellipsis/src/lib/**/*.ts": "tslint"
   }
 }
