@@ -1,6 +1,8 @@
 {
   "name": "2yy-ngx-ellipsis",
   "version": "0.0.1",
+	"homepage": "https://github.com/2YY/ngx-ellipsis",
+	"repository": "https://github.com/2YY/ngx-ellipsis",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
